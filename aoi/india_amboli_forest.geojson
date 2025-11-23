@@ -1,0 +1,13 @@
+{
+  "type":"FeatureCollection",
+  "features":[{"type":"Feature","properties":{"region":"amboli_forest"},"geometry":{
+    "type":"Polygon",
+    "coordinates":[[
+      [74.00,15.85],
+      [74.20,15.85],
+      [74.20,16.05],
+      [74.00,16.05],
+      [74.00,15.85]
+    ]]
+  }}]
+}

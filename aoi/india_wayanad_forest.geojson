@@ -1,0 +1,13 @@
+{
+  "type":"FeatureCollection",
+  "features":[{"type":"Feature","properties":{"region":"wayanad_forest"},"geometry":{
+    "type":"Polygon",
+    "coordinates":[[
+      [76.00,11.50],
+      [76.20,11.50],
+      [76.20,11.70],
+      [76.00,11.70],
+      [76.00,11.50]
+    ]]
+  }}]
+}

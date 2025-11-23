@@ -1,0 +1,13 @@
+{
+  "type":"FeatureCollection",
+  "features":[{"type":"Feature","properties":{"region":"western_ghats_agumbe"},"geometry":{
+    "type":"Polygon",
+    "coordinates":[[
+      [75.03,13.45],
+      [75.18,13.45],
+      [75.18,13.60],
+      [75.03,13.60],
+      [75.03,13.45]
+    ]]
+  }}]
+}

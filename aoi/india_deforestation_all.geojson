@@ -1,0 +1,13 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type":"Feature","properties":{"region":"western_ghats_agumbe"},"geometry":{"type":"Polygon","coordinates":[[[75.03,13.45],[75.18,13.45],[75.18,13.60],[75.03,13.60],[75.03,13.45]]]}},
+    {"type":"Feature","properties":{"region":"wayanad_forest"},"geometry":{"type":"Polygon","coordinates":[[[76.00,11.50],[76.20,11.50],[76.20,11.70],[76.00,11.70],[76.00,11.50]]]}},
+    {"type":"Feature","properties":{"region":"amboli_forest"},"geometry":{"type":"Polygon","coordinates":[[[74.00,15.85],[74.20,15.85],[74.20,16.05],[74.00,16.05],[74.00,15.85]]]}},
+    {"type":"Feature","properties":{"region":"arunachal_pasighat"},"geometry":{"type":"Polygon","coordinates":[[[95.20,28.00],[95.35,28.00],[95.35,28.15],[95.20,28.15],[95.20,28.00]]]}},
+    {"type":"Feature","properties":{"region":"kaziranga_buffer"},"geometry":{"type":"Polygon","coordinates":[[[93.30,26.50],[93.45,26.50],[93.45,26.65],[93.30,26.65],[93.30,26.50]]]}},
+    {"type":"Feature","properties":{"region":"kanha_buffer"},"geometry":{"type":"Polygon","coordinates":[[[80.40,22.05],[80.60,22.05],[80.60,22.25],[80.40,22.25],[80.40,22.05]]]}},
+    {"type":"Feature","properties":{"region":"dandakaranya_forest"},"geometry":{"type":"Polygon","coordinates":[[[82.00,19.00],[82.20,19.00],[82.20,19.20],[82.00,19.20],[82.00,19.00]]]}},
+    {"type":"Feature","properties":{"region":"similipal_south"},"geometry":{"type":"Polygon","coordinates":[[[86.20,21.40],[86.40,21.40],[86.40,21.60],[86.20,21.60],[86.20,21.40]]]}}
+  ]
+}
