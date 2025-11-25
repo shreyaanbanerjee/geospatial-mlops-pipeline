@@ -4,7 +4,7 @@ from torch.utils.data import Dataset, DataLoader
 import rasterio
 import numpy as np
 import mlflow
-from train.model.siamese_unet import SiameseUNet
+from model.siamese_unet import SiameseUNet
 
 class ChipDataset(Dataset):
     def __init__(self, folder):

@@ -1,0 +1,4 @@
+# DVC ignore
+.dvc/config.local
+.dvc/tmp
+.dvc/cache

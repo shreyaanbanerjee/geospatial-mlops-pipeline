@@ -1,0 +1,42 @@
+name: Deploy Model
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Run every 15 minutes
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install mlflow
+
+      - name: Check for New Model
+        env:
+          MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
+        run: |
+          # Script to check MLflow for "ready_for_deployment" tag
+          # If found, download artifact and trigger deployment
+          echo "Checking MLflow for new models..."
+          # python tools/check_model.py
+          
+      - name: Build and Deploy
+        if: success() # Only run if a new model was found (simulated logic)
+        run: |
+          echo "Building Docker image..."
+          docker build -t planet-sentinel-serve serve/
+          echo "Stopping old container..."
+          docker stop planet-sentinel || true
+          docker rm planet-sentinel || true
+          echo "Starting new container..."
+          docker run -d --name planet-sentinel -p 8000:8000 planet-sentinel-serve

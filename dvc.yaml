@@ -1,0 +1,21 @@
+stages:
+  ingest:
+    cmd: python ingest/gee_ingest.py
+    deps:
+      - ingest/gee_ingest.py
+    outs:
+      - data/raw
+  preprocess:
+    cmd: python preprocess/chip_dataset.py
+    deps:
+      - preprocess/chip_dataset.py
+      - data/raw
+    outs:
+      - data/chips
+  train:
+    cmd: python train/train.py
+    deps:
+      - train/train.py
+      - data/chips
+    outs:
+      - runs/model_inference.pth

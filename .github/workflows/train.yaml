@@ -1,0 +1,31 @@
+name: Train Model
+
+on:
+  workflow_dispatch:
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          pip install kaggle mlflow dvc
+
+      - name: Trigger Kaggle Training
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          # This is a placeholder for the actual Kaggle API call
+          # In a real scenario, we would use 'kaggle kernels push'
+          echo "Triggering Kaggle Kernel..."
+          # kaggle kernels push -p train/
+          echo "Training started on Kaggle."
