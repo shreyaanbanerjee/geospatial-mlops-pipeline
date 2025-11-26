@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+torch
+numpy
+rasterio
+aiofiles
+python-multipart
+pydantic

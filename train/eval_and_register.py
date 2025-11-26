@@ -6,7 +6,7 @@ import numpy as np
 import mlflow
 from train.model.siamese_unet import SiameseUNet
 
-
+import sys
 def iou_score(pred, target, thr=0.5):
     p = (pred>thr).astype(np.uint8)
     t = (target>0.5).astype(np.uint8)
@@ -50,5 +50,8 @@ def main():
         mlflow.log_metric('mean_iou', mean_iou)
         print(f'[OK] evaluated {n} samples; mean_iou={mean_iou:.4f}')
 
-if __name__=='__main__':
-    main()
+
+if __name__ == "__main__" and __package__ is None:
+    # ensure repo root is on sys.path so `import train` works
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    sys.path.insert(0, repo_root)
