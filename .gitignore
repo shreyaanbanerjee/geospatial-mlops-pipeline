@@ -212,3 +212,11 @@ __marimo__/
 /data/raw/
 outputs/
 runs/
+
+# ignore local backups and raw data
+/data/
+/data/raw/
+/data/raw/backup_normalized/
+/data/raw/backup_4d/
+outputs/
+runs/
